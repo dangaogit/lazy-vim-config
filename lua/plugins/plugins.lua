@@ -9,4 +9,14 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
     },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        opts = {
+            window = {
+                mappings = {
+                    ["<TAB>"] = "open",
+                },
+            },
+        },
+    },
 }
