@@ -17,6 +17,13 @@ end, { desc = "Format" })
 
 local opt = { noremap = true, silent = true }
 
+-- terminal
+local lazyterm = function()
+    LazyVim.terminal(nil, { cwd = LazyVim.root() })
+end
+map("n", "<A-t>", lazyterm, { desc = "Terminal (Root dir)" })
+map("n", "<A-T>", lazyterm, { desc = "Terminal (Root dir)" })
+
 -- lsp
 -- local command_rename = '<cmd>lua vim.lsp.buf.rename()<CR>'
 local command_rename = "<cmd>Lspsaga rename<CR>"
